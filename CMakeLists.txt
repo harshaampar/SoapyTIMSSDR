@@ -6,6 +6,7 @@
  project(SoapyTimsSDR CXX)
  
  find_package(SoapySDR "0.7" NO_MODULE)
+ message(STATUS "Found SoapySDR ${SoapySDR_VERSION}")
   if (NOT SoapySDR_FOUND) 
      message(FATAL_ERROR "Soapy SDR development files not found...") 
   endif () 
@@ -62,8 +63,6 @@
      LIBRARIES ${LIBTIMSSDR_LIBRARIES}
  )
  
- target_link_libraries(TimsSDRSupport usb)
-
  ########################################################################
  # uninstall target
  ########################################################################
